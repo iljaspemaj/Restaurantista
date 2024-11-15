@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurantista</title>
+    <link rel="stylesheet" href="./styles/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <section id="menu-section">
+            <img src="./photos/original.jpg" alt="Cooking image" id="menu-image">
+            <h2>Menu</h2>
+            <select name="menu" id="menu" title="Select a menu category" onchange="updateMenuItems()">
+                <option value="pasta">Pasta</option>
+                <option value="pizza">Pizza</option>
+                <option value="dessert">Desserts</option>
+            </select>
+            <input type="text" id="search" placeholder="Search menu items...">
+            <ul id="menu-items">
+
+            </ul> 
+        </section>
+        
+        <section class="basket-section">
+            <h2>Add to Basket</h2>
+            <ul id="basket-items">
+            
+            </ul>
+            <p id="basket-message">
+                Sorry, you can't order yet. Restauranista has set a minimum order amount of 20,00€ (excl. delivery cost)
+            </p>
+            <p>Subtotal:<span id="subtotal-price">0.00</span>&#8364</p>
+            <p>Tax (10%): <span id="tax-price">0.00</span>%</p>
+            <p>Total: <span id="total-price">0.00</span></p>
+            <button id="checkout">Pay</button>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    
+    <script src="./server.js"></script>
+    <script src="template.js"></script>
+    <script src="./styles/scripts/menu.js"></script>
+</body>
+</html>
