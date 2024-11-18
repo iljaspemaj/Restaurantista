@@ -1,0 +1,691 @@
+*{
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    height: 80px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    color: #ff8000;
+}
+
+.restaurant-section{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.restaurant-section::before, 
+.restaurant-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom;
+    background-color: rgba(255,128,0,0.8);
+    z-index: -1;
+}
+
+
+.restaurant-section::before {
+    right: 50%;
+    transform: skewY(-5deg) translateX(50%);
+}
+
+.restaurant-section::after {
+    left: 50%;
+    transform: skewY(5deg) translateX(-50%);
+}
+
+
+#restorant-info {
+    flex: 1;
+    background-color: #fff;
+    text-align: center;
+    padding: 50px;
+    margin-right: 20px;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#restorant-info h1{
+    color: #ff8000;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#restorant-info h3{
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#restorant-info button {
+    background-color: #ff8000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    border: solid 2px #ff8000;
+    transition: 300ms;
+}
+
+#restorant-info button:hover {
+    background-color: #fff;
+    color: #ff8000;
+    
+}
+
+#restaurant-image {
+    flex: 1;
+    text-align: center;
+    padding: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 130px;
+}
+
+#restaurant-image img {
+    max-width: 70%;
+    height: auto;
+    transition: 300ms;
+}
+
+#restaurant-image img:hover {
+    transform: scale(1.2);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    pad: 10px;
+    opacity: 0;
+    transition: 300ms;
+}
+
+#restaurant-image:hover .image-overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.order-process-overview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fff;
+    padding: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+
+}
+
+.order-process{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin-bottom: 30px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-process .icon img {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.order-process h3 {
+    font-size: 24px;
+    margin: 8px 0;
+}
+
+.order-process p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.original-taste {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+    background: url(/photos/original.jpg) no-repeat center fixed;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.original-taste .content h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.original-taste .content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.original-taste .content button {
+    background-color: #333;
+    color: #fff;
+    font-size: 22px;
+    padding: 16px 25px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.original-taste .content button:hover {
+    background-color: #191919;
+
+}
+
+.statistics {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.section-header {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ff8000;
+}
+
+.section-description {
+    font-size: 18px;
+    margin-bottom: 50px;
+
+}
+
+.statistics-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.statistic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ff8000;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.statistic-number {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.statistic-text {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.about-us {
+    position: relative;
+    height: 600px;
+    
+}
+
+.about-us .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/photos/original-mmks.jpg);
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.about-us-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background-color: #ffffffa3;
+    padding: 30px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-us-content h1{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ff8000;
+}
+
+.about-us-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.video {
+    background-color: #ff8000;
+    background-size: cover;
+    background-position: center;
+    background: blur(5px);
+    padding: 50px 0;
+}
+
+.video_content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.video_header {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.video_text {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.video_player {
+    position: relative;
+    padding-bottom: 55%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video_iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.newsletter-section {
+    background: #ff8000;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.newsletter-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.newsletter-section label{
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.newsletter-section input{
+    display: block;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.address {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.address h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20;
+}
+
+.address p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.address a {
+    font-size: 20px;
+    color: #ff8000;
+    margin-bottom: 20px;
+}
+
+.map {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 60px;
+}
+
+.contact-form {
+    text-align: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.contact-form h2 {
+    margin: 40px  0;
+    font-size: 40px;
+    color: #ff8000;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+}
+
+.contact-form form label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-form form input, .contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form form input:focus {
+    outline: none;
+    border: solid 2px #ff8000;
+}
+
+.contact-form form button {
+    background-color: #ff8000;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.contact-form form button:hover {
+    background-color: #e97400;
+}
+
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.testimonials h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #ff8000;
+    margin-bottom: 50px;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.testimonial-text {
+    max-width: 500px;
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-text p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.8; 
+    margin-bottom: 30px;
+}
+
+.testimonial-box {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin-left: 20px;
+    margin-top: 10px;
+    object-fit: cover;
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.author-name {
+    font-size: 28px !important;
+    font-weight: 800;
+    color: #ff8000;
+    padding-left: 40px;
+    margin-top: 10px;
+}
+
+footer {
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    gap: 30px;
+
+}
+
+.footer-content .footer-column img {
+    height: 150px;
+}
+
+.footer-content .footer-column h3 {
+    text-align: left;
+    color: #ff8000;
+    font-size: 28px;
+}
+
+.footer-content .footer-column p {
+    text-align: left;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media-icons a {
+    text-decoration: none;
+}
+
+.social-media-icons i {
+    color: #000;
+}
+
+.footer-bootom {
+    background-color: #ff8000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Styling for the burger menu icon */
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+    /* Styling for the active burger menu icon */
+    .nav-active .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .nav-active .line2 {
+        opacity: 0;
+    }
+
+    .nav-active .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Styling for the mobile navigation menu */
+    .nav-active~.nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 20px;
+        transition: all 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .nav-active .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-active~.nav-links.max-height {
+        max-height: 500px;
+    }
+}
