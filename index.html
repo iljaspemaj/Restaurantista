@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Where to eat, Restaurants near, Best [meal] spots in [city]">
+    <meta name="description" content="Discover the best food in your area. Discover new recipes, read reviews, and book a table.">
+    <title>Restauranista</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+       <section class="restaurant-section">
+        <div id="restorant-info">
+            <h1>Restaurantista</h1>
+            <h3>Your digital Restorant</h3>
+            <button class="modern button" id="myModal"  onclick="openModal()">
+                Order Here
+            </button>
+        </div>
+        <div id="restaurant-image">
+            <img src="./photos/hamburger-web-devs-mmks.png" alt="Restaurant Image, not available">
+            <div class="image-overlay">
+                <span class="overlay-text">Savour the flavours of our passion</span>
+            </div>
+        </div>
+       
+        <!--<div class="restaurant-text">
+            <h3>Order with ease</h3>
+            <p>
+                Experience the convenience of ordering your favorite dishes with just a few clicks
+            </p>
+        </div>-->
+    
+        </section>
+        <div class="order-process-overview">
+            <div class="order-process">
+                <span class="icon">
+                    <img src="./photos/pasta.jpg" alt="Photo unavailable">
+                </span>
+                <h3>Choose</h3>
+                <p>Select your favorite dishes</p>
+            </div>
+            <div class="order-process">
+                <span class="icon">
+                  <img src="/photos/risotto.jpg" alt="Photo unavailable">
+                </span>
+                <h3>Order</h3>
+                <p>Use our website to experience a smooth online ordering.</p>
+             </div>
+                <div class="order-process">
+                    <span class="icon">
+                    <img src="./photos/pizza.jpg" alt="Photo unavailable">
+                    </span>
+                    <h3>Pay</h3>
+                    <p>Our payment service ensures a seamless and hassle-free prcoess</p>
+                </div>
+        </div>
+        <div class="original-taste">
+            <div class="content">
+                <h2>Original Taste</h2>
+                <p>Feel exited to taste our amazing food and order online now!</p>
+                <a href="menu.html">
+                    <button class="button">Order online</button>
+                </a>
+            </div>
+        </div>
+
+       <section class="statistics">
+        <div class="container">
+            <h2 class="section-header">
+                We like numbers. How about you?
+            </h2>
+            <p class="section-description">
+                We served to amazing people who appreciate and loved our food, our
+                success is bigger with you.
+            </p>
+            
+            <div class="statistics-wrapper">
+                <div class="statistic">
+                    <span class="statistic-number">
+                        70.000
+                    </span>
+                    <span class="statistic-text">
+                        Happy Customers
+                    </span>
+                    </div>
+                    <div class="statistic">
+                        <span class="statistic-number">
+                            50
+                        </span>
+                        <span class="statistic-text">
+                            Dishes
+                        </span>
+                    </div>
+                    <div class="statistic">
+                        <span class="statistic-number">
+                            100,00
+                        </span>
+                        <span class="statistic-text">
+                            Orders
+                        </span>
+                    </div>
+                    <div class="statistic">
+                        <span class="statistic-number">
+                            10,000
+                        </span>
+                        <span class="statistic-text">
+                            Daily Visitors
+                        </span>
+                    </div>
+                    </div>
+            </div>
+       </section>
+       <section class="about-us">
+        <div class="background-image"></div>
+        <div class="about-us-content">
+            <h2>About Us</h2>
+            <h1>The Resturant that never existed</h1>
+            <p>
+                Welcome to Restaurantista - where culinary 
+                delights meet the digital realm. Our story 
+                begins with a passion for exceptional food 
+                and a vision to bring delectable flavors directly to your doorstep. 
+                As a fully online restaurant, we have reimagined the dining experience, eliminiating the need for a physical locations and embracing the convenience of the virtual world
+            </p>
+            <p>
+                At Restaurantista, we understand the fast-paced nature of modern life, with this in mind, we set out to create an innovative platform that seamlessly connects food lovers with a diverse menu of tantalizing dishes, all available at the click of a button.
+            </p>
+        </div>
+       </section>
+       <section class="newsletter-section">
+        <h2>Subscribe to our Newsletter</h2>
+        <form id="newsletter-form">
+            <label for="emailaddress">Email</label>
+            <input type="email" name="emailaddress" id="emailaddress">
+            <label for="newsletter">Subscribe to our Newsletter</label>
+            <input type="checkbox" id="newsletter" name="newsletter" checked>
+            <button type="submit">Subscribe</button>
+        </form>
+        <p id="message-container"></p>
+       </section>
+       <section class="location-section">
+        <div class="location">
+            <div class="address">
+                <h2>Location</h2>
+                <p>123 Main St.</p>
+                <p>New York, USA 10015</p>
+                <h2>Call Us</h2>
+                <a href="tel:0699829506">069-982-9506</a>
+                <h2>Hours of Operation</h2>
+                <p>24/7</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.273795930676!2d21.15875197522781!3d42.655553016383266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee896b552d7%3A0x31bf5e925cb705a3!2sThe%20Faculty%20of%20Mathematics%20and%20Natural%20Sciences!5e0!3m2!1sen!2s!4v1724334291564!5m2!1sen!2s"
+            width="100%" 
+            height="450" 
+            allowfullscreen=""    
+            title="Restaurantista Location"></iframe>
+        </div>
+       </section>
+       <section class="video">
+        <div class="video_content">
+            <h2 class="video_header">Turn Your Home into a Restaurant</h2>
+            <p class="video_text">
+                Are you the kind of person who relishes the joy of savoring delicious food in the comfort of your own home? If you prefer to escape the hustle and bustle of overcrowded restaurants, say goodbye to the stress of making reservations, and indulge in the convenience of dining at your own pace, then you've come to the right place.
+            </p>
+            <div class="video_player">
+                <video class="video_iframe" src="./photos/promo-video-restaurantista.mp4" 
+                autoplay
+                loop
+                muted></video>
+            </div>
+        </div>
+       </section>
+       <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Message</label>
+            <textarea type="message" id="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+       </section>
+       
+       <section class="testimonials">
+        <div class="container">
+            <h1>Testimonials</h1>
+            <div class="testimonial-container">
+                
+                <div class="testimonial-text">
+                    <p>"The best way to any give you testimonial a boost is by adding a compelling summary sub-headline above it. This could be as simple as pulling a powerful quote from a longer testimonial or creating your own copy that nicely wums up the value of the testimonial."</p>
+                    <hr>
+                    <div class="testimonial-box">
+                        <img src="./photos/person1.jpg" alt="Personi 1">
+                        <div class="testimonial-content">
+                            <p class="author-name">Joana Doe</p>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-text">
+                    <p>
+                        "Hi there, Bob. I'm writing to ask if you wouldn't mind giving us a short testimonial for our website. We're updating a few pages, and I'm hoping to add something from you. It would link back to your site, so it's actually a good thing for your SEO."
+                    </p>
+                    <hr>
+                    <div class="testimonial-box">
+                        <img src="./photos/person2.jpg" alt="Personi 2">
+                        <div class="testimonial-content">
+                            <p class="author-name">Mike Johnson</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-text">
+                    <p>
+                        "I just wanted to share a quick note and let you know that you guys do a really good job. 
+                        I'm glad I decided to work with you. 
+                        It's really great how easy your websites are to update and manage. 
+                        I never have any problem at all."
+                    </p>
+                    <hr>
+                    <div class="testimonial-box">
+                        <img src="./photos/person3.jpg" alt="Personi 3">
+                        <div class="testimonial-content">
+                        <p class="author-name">Jane Smith</p>
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-text">
+                    <p>
+                        "A testimonial is an honest endorsement of your product or service that usually comes from a customer, 
+                        collegaue, or peer who as benefited from or experienced success as a result of teh work you did for them."
+                    </p>
+                    <hr>
+                    <div class="testimonial-box">
+                        <img src="./photos/person4.jpg" alt="Personi 4">
+                    <div class="testimonial-content">
+                        <p class="author-name">Mary Johnson</p>
+                    </div>
+                </div>
+                </div>
+
+
+            </div>
+        </div>
+       </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>
+                        At our website, we combine food with convenience of online ordering. 
+                        With a just few clicks, you can explore our menu, select your favorite dishes, 
+                        and have them delivered right to your doorstep.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>123 Main St. <br>
+                    New York Usa 10015 <br>
+                    Email: order@restaurantista.org <br>
+                    Phone: 069 982 9506</p>
+                </div>
+                <div class="footer-column">
+                    <img src="./photos/restaurantista-logo.jpg" alt="Restaurantista Logo" class="footer-logo">
+                    <h3>Follow Us</h3>
+                
+                
+                <div class="social-media-icons">
+                    <a href="https://facebook.com/" title="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                <a href="https://x.com" title="X-twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://instagram.com/" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                <a href="https://linkedin.com/" title="Linkedin">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                </div>
+            </div>
+         </div>
+        </div>
+            <p class="footer-bootom">
+            <i class="fa-regular fa-copyright"></i> 2024 Restaurantista, all rights reserved
+            </p>
+    </footer>
+    
+    <script src="./template.js"></script>
+    <script src="./server.js"></script>
+    <script src="./styles/scripts/ajax.js"></script>
+    <script src="./styles/scripts/submit-form.js"></script>
+    <script src="./styles/scripts/main.js"></script>
+</body>
+</html>
